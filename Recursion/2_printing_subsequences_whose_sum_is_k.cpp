@@ -1,27 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
 // print subsequence whose sum is k
-//  void printF(int index,vector<int> &res,int s,int sum,int arr[],int n)
-//  {
-//      if(index==n)
-//      {
-//          if(s==sum)
-//          {
-//              for(auto x:res)
-//              {
-//                  cout<<x<<" ";
-//              }
-//              cout<<endl;
-//          }
-//          return;
-//      }
-//      res.push_back(arr[index]);
-//      s+=arr[index];
-//      printF(index+1,res,s,sum,arr,n);
-//      res.pop_back();
-//      s-=arr[index];
-//      printF(index+1,res,s,sum,arr,n);
-//  }
+void printF(int index, vector<int> &res, int s, int sum, int arr[], int n)
+{
+    if (index == n)
+    {
+        if (s == sum)
+        {
+            for (auto x : res)
+            {
+                cout << x << " ";
+            }
+            cout << endl;
+        }
+        return;
+    }
+    res.push_back(arr[index]);
+    s += arr[index];
+    printF(index + 1, res, s, sum, arr, n);
+    res.pop_back();
+    s -= arr[index];
+    printF(index + 1, res, s, sum, arr, n);
+}
 
 // print any subsequence whose sum is equal to k
 //  bool printF(int index,vector<int> &res,int s,int sum,int arr[],int n)

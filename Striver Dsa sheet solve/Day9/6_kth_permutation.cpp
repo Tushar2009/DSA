@@ -15,7 +15,6 @@ string getPermutation(int n, int k)
     while (true)
     {
         ans += to_string(numbers[k / fact]);
-        ;
         numbers.erase(numbers.begin() + k / fact);
         if (numbers.size() == 0)
         {
