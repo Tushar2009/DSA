@@ -1,5 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
+// Time Complexity O(nlogn)
+// space complexity O(n)
+
 void merge(vector<int> &arr, int low, int mid, int high)
 {
     vector<int> temp;    // temporary array
